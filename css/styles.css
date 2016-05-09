@@ -27,8 +27,9 @@ body {
 .menu {
   width: 5em;
   height: 5em;
-  animation-name: num2;
+  animation-name: back;
   animation-duration: 1s;
+  animation-timing-function: steps(6000);
   transform: translate(-55px, 0px) rotate(120deg);
   top: 50%;
   left: 50%;
@@ -229,15 +230,16 @@ body {
 
 
 .menu.active {
-  animation-name: num1;
+  animation-name: play;
   animation-duration: 1s;
+  animation-timing-function: steps(6000);
   transform: translate(5px,0) rotate(59deg);
   top: 5%;
   left: 5%;
 
 }
 
-@keyframes num1 {
+@keyframes play {
   from {
     transform: translate(-55px, 0px) rotate(120deg);
     top: 50%;
@@ -250,7 +252,7 @@ body {
   }
 }
 
-@keyframes num2 {
+@keyframes back {
   from {
     transform: translate(20px,0) rotate(59deg);
     top: 5%;
@@ -261,14 +263,6 @@ body {
     top: 50%;
     left: 50%;
   }
-}
-
-.menu.active .trigger .line:before {
-
-}
-
-.menu.active .trigger .line:after {
-
 }
 
 .rotater:nth-child(1) {
@@ -290,9 +284,9 @@ body {
 }
 
 .menu.active .rotater:nth-child(2) .btn-icon {
-  -webkit-transform: translate(-13em, -4.6em) rotate(-22.5deg);
-  -ms-transform: translate(-13em, -4.6em) rotate(-22.5deg);
-  transform: translate(-13em, -4.6em) rotate(-22.5deg);
+  -webkit-transform: translate(20em, -4.6em) rotate(-81deg);
+  -ms-transform: translate(20em, -4.6em) rotate(-81deg);
+  transform: translate(20em, -4.6em) rotate(-81deg);
 }
 
 .rotater:nth-child(3) {
@@ -302,9 +296,9 @@ body {
 }
 
 .menu.active .rotater:nth-child(3) .btn-icon {
-  -webkit-transform: translateX(-10em) rotate(-67.5deg);
-  -ms-transform: translateX(-10em) rotate(-67.5deg);
-  transform: translateX(-10em) rotate(-67.5deg);
+  -webkit-transform: rotate(-126deg) translate(99px, 400px);
+  -ms-transform: rotate(-126deg) translate(99px, 400px);
+  transform: rotate(-126deg) translate(99px, 400px);
 }
 
 .rotater:nth-child(4) {
@@ -314,9 +308,9 @@ body {
 }
 
 .menu.active .rotater:nth-child(4) .btn-icon {
-  -webkit-transform: rotate(-112.5deg) translate(8.6em, -9.2em);
-  -ms-transform: rotate(-112.5deg) translate(8.6em, -9.2em);
-  transform: rotate(-112.5deg) translate(8.6em, -9.2em);
+  -webkit-transform: rotate(-171deg) translate(125px, 578px);
+  -ms-transform: rotate(-171deg) translate(125px, 578px);
+  transform: rotate(-171deg) translate(125px, 578px);
 }
 
 .rotater:nth-child(5) {
