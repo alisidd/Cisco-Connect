@@ -2,7 +2,6 @@
   <head>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/fonts.css">
     <script>
       $(document).ready(function() {
         $(".trigger").click(function() {
@@ -13,20 +12,44 @@
 
   </head>
   <body>
-
     <div class="menu" style="height:110px;width:110px">
-        <div class="btn trigger"> <span class="line"></span> </div>
-      <div class="rotater">
-        <div class="btn btn-icon"> <span class="circle"></span> <img src="images/hospital.png" class="menu-icon" style="height:30%;width:30%"></img> <a class="menu-option1"> Hospital </a> </div>
+
+      <!-- Start button -->
+      <div class="btn trigger">
+        <span class="line"></span>
       </div>
 
+      <!-- Menu options -->
+
+      <!-- Option 1 -->
       <div class="rotater">
-        <div class="btn btn-icon"> <span class="circle"></span> <img src="images/mall.png" class="menu-icon2" style="height:40%;width:40%"></img> <a class="menu-option2"> Mall </a> </div>
+        <div class="btn btn-icon">
+          <span class="circle"></span>
+          <img src="images/hospital.png" class="menu-icon" style="height:30%;width:30%">
+          <a class="menu-option1"> Hospital </a>
+        </div>
       </div>
 
+      <!-- Option 2 -->
       <div class="rotater">
-        <div class="btn btn-icon"> <span class="circle"></span> <img src="images/retail.png" class="menu-icon" style="height:30%;width:30%"></img> <a class="menu-option3"> Retail</a> </div>
+        <div class="btn btn-icon">
+          <span class="circle"></span>
+          <img src="images/mall.png" class="menu-icon2" style="height:40%;width:40%">
+          <a class="menu-option2"> Mall </a>
+        </div>
       </div>
+
+      <!-- Option 3 -->
+      <div class="rotater">
+        <div class="btn btn-icon">
+          <span class="circle"></span>
+          <img src="images/retail.png" class="menu-icon" style="height:30%;width:30%">
+          <a class="menu-option3"> Retail</a>
+        </div>
+      </div>
+
+      <!-- Circle for start button -->
+
       <span class="circle"></span>
     </div>
   </body>
