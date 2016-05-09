@@ -1,3 +1,61 @@
+@font-face {
+  font-family: 'Work Sans';
+  font-weight: 200;
+  font-style: normal;
+  src: url('../fonts/Work-Sans-200/Work-Sans-200.eot');
+  src: url('../fonts/Work-Sans-200/Work-Sans-200.eot?#iefix') format('embedded-opentype'),
+       local('Work Sans ExtraLight'),
+       local('Work-Sans-200'),
+       url('../fonts/Work-Sans-200/Work-Sans-200.woff2') format('woff2'),
+       url('../fonts/Work-Sans-200/Work-Sans-200.woff') format('woff'),
+       url('../fonts/Work-Sans-200/Work-Sans-200.ttf') format('truetype'),
+       url('../fonts/Work-Sans-200/Work-Sans-200.svg#WorkSans') format('svg');
+}
+
+@keyframes imageanimate {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.8) translate(0px,3px);
+  }
+}
+
+@keyframes imageanimateback {
+  from {
+    transform: scale(0.8) translate(0px,3px);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes play {
+  from {
+    transform: translate(-55px, 0px) rotate(120deg);
+    top: 50%;
+    left: 50%;
+  }
+  to {
+    transform: translate(5px,0) rotate(59deg);
+    top: 5%;
+    left: 5%;
+  }
+}
+
+@keyframes back {
+  from {
+    transform: translate(20px,0) rotate(59deg);
+    top: 5%;
+    left: 5%;
+  }
+  to {
+    transform: translate(-55px, 0px) rotate(120deg);
+    top: 50%;
+    left: 50%;
+  }
+}
+
 #gradient {
   position: absolute;
   left: 0;
@@ -12,7 +70,6 @@
   right: 0;
   overflow: auto;
 }
-
 
 #link1 {
   position:absolute;
@@ -73,6 +130,8 @@ a {
   transition: color 0.3s;
 }
 
+/* Circle around the start button */
+
 .menu .circle {
   display: block;
   position: absolute;
@@ -98,66 +157,12 @@ a {
   z-index: -1;
 }
 
-
 .menu .btn.trigger {
   opacity: 1;
   z-index: 100;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
-}
-
-.menu .btn.trigger:active {
-  -webkit-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  transform: scale(0.8);
-}
-
-.menu .btn.trigger:active ~ .circle {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.menu.active .btn-icon:active > .circle {
-  -webkit-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  transform: scale(0.8) translate(-3.2em, -3em);
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.menu.active .btn-icon > img{
-  -webkit-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  animation-name: imageanimateback;
-  animation-duration: 0.25s;
-  animation-timing-function: steps(6000);
-  transform: scale(1);
-}
-
-.menu.active .btn-icon:active > img {
-  -webkit-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  animation-name: imageanimate;
-  animation-duration: 0.25s;
-  animation-timing-function: steps(6000);
-  transform: scale(0.8) translate(0px,3px);
-}
-
-@keyframes imageanimate {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0.8) translate(0px,3px);
-  }
-}
-
-@keyframes imageanimateback {
-  from {
-    transform: scale(0.8) translate(0px,3px);
-  }
-  to {
-    transform: scale(1);
-  }
 }
 
 .menu .btn.trigger .line {
@@ -191,6 +196,7 @@ a {
   -o-transform: rotate(60deg);
   transform: translate(16px, -12px) rotate(60deg);
 }
+
 .menu .btn.trigger .line:after {
   content: "";
   display: block;
@@ -229,6 +235,16 @@ a {
   transform-origin: 50% 50%;
 }
 
+/* What happens when start button is pressed */
+.menu.active {
+  animation-name: play;
+  animation-duration: 1s;
+  animation-timing-function: steps(6000);
+  transform: translate(5px,0) rotate(59deg);
+  top: 5%;
+  left: 5%;
+}
+
 .menu.active .btn-icon {
   opacity: 1;
   z-index: 50;
@@ -259,6 +275,20 @@ a {
     z-index: -1;
 }
 
+/* Circle around start button before and after */
+
+.menu .btn.trigger:active {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.menu .btn.trigger:active ~ .circle {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Menu circle before and after */
+
 .menu.active .btn-icon .circle {
     display: block;
     position: absolute;
@@ -284,57 +314,47 @@ a {
     z-index: -1;
 }
 
+.menu.active .btn-icon:active > .circle {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8) translate(-3.2em, -3em);
+  background: rgba(255, 255, 255, 0.5);
+}
 
-.menu.active {
-  animation-name: play;
-  animation-duration: 1s;
+/* Icon before and after */
+
+.menu.active .btn-icon > img{
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  animation-name: imageanimateback;
+  animation-duration: 0.25s;
   animation-timing-function: steps(6000);
-  transform: translate(5px,0) rotate(59deg);
-  top: 5%;
-  left: 5%;
-
+  transform: scale(1);
 }
 
-@keyframes play {
-  from {
-    transform: translate(-55px, 0px) rotate(120deg);
-    top: 50%;
-    left: 50%;
-  }
-  to {
-    transform: translate(5px,0) rotate(59deg);
-    top: 5%;
-    left: 5%;
-  }
+.menu.active .btn-icon:active > img {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  animation-name: imageanimate;
+  animation-duration: 0.25s;
+  animation-timing-function: steps(6000);
+  transform: scale(0.8) translate(0px,3px);
 }
 
-@keyframes back {
-  from {
-    transform: translate(20px,0) rotate(59deg);
-    top: 5%;
-    left: 5%;
-  }
-  to {
-    transform: translate(-55px, 0px) rotate(120deg);
-    top: 50%;
-    left: 50%;
-  }
+/* Menu options' icons */
+.menu-icon {
+  position: relative;
+  left: 38.5px;
+  top: 38.5px;
 }
 
-@font-face {
-  font-family: 'Work Sans';
-  font-weight: 200;
-  font-style: normal;
-  src: url('../fonts/Work-Sans-200/Work-Sans-200.eot');
-  src: url('../fonts/Work-Sans-200/Work-Sans-200.eot?#iefix') format('embedded-opentype'),
-       local('Work Sans ExtraLight'),
-       local('Work-Sans-200'),
-       url('../fonts/Work-Sans-200/Work-Sans-200.woff2') format('woff2'),
-       url('../fonts/Work-Sans-200/Work-Sans-200.woff') format('woff'),
-       url('../fonts/Work-Sans-200/Work-Sans-200.ttf') format('truetype'),
-       url('../fonts/Work-Sans-200/Work-Sans-200.svg#WorkSans') format('svg');
+.menu-icon2 {
+  position: relative;
+  left: 33px;
+  top: 33px;
 }
 
+/* The menu options' font and positioning*/
 .menu-option1 {
   position: relative;
   left: 125px;
@@ -363,17 +383,7 @@ a {
   width: 200px;
 }
 
-.menu-icon {
-  position: relative;
-  left: 38.5px;
-  top: 38.5px;
-}
-
-.menu-icon2 {
-  position: relative;
-  left: 33px;
-  top: 33px;
-}
+/* The menu options' rotation */
 
 .rotater:nth-child(1) {
   -webkit-transform: rotate(-22.5deg);
@@ -421,64 +431,4 @@ a {
   -webkit-transform: rotate(-171deg) translate(125px, 578px);
   -ms-transform: rotate(-171deg) translate(125px, 578px);
   transform: rotate(-171deg) translate(125px, 578px);
-}
-
-.rotater:nth-child(5) {
-  -webkit-transform: rotate(157.5deg);
-  -ms-transform: rotate(157.5deg);
-  transform: rotate(157.5deg);
-}
-
-.menu.active .rotater:nth-child(5) .btn-icon {
-  -webkit-transform: translateX(-10em) rotate(-157.5deg);
-  -ms-transform: translateX(-10em) rotate(-157.5deg);
-  transform: translateX(-10em) rotate(-157.5deg);
-}
-
-.rotater:nth-child(6) {
-  -webkit-transform: rotate(202.5deg);
-  -ms-transform: rotate(202.5deg);
-  transform: rotate(202.5deg);
-}
-
-.menu.active .rotater:nth-child(6) .btn-icon {
-  -webkit-transform: translateX(-10em) rotate(-202.5deg);
-  -ms-transform: translateX(-10em) rotate(-202.5deg);
-  transform: translateX(-10em) rotate(-202.5deg);
-}
-
-.rotater:nth-child(7) {
-  -webkit-transform: rotate(247.5deg);
-  -ms-transform: rotate(247.5deg);
-  transform: rotate(247.5deg);
-}
-
-.menu.active .rotater:nth-child(7) .btn-icon {
-  -webkit-transform: translateX(-10em) rotate(-247.5deg);
-  -ms-transform: translateX(-10em) rotate(-247.5deg);
-  transform: translateX(-10em) rotate(-247.5deg);
-}
-
-.rotater:nth-child(8) {
-  -webkit-transform: rotate(292.5deg);
-  -ms-transform: rotate(292.5deg);
-  transform: rotate(292.5deg);
-}
-
-.menu.active .rotater:nth-child(8) .btn-icon {
-  -webkit-transform: translateX(-10em) rotate(-292.5deg);
-  -ms-transform: translateX(-10em) rotate(-292.5deg);
-  transform: translateX(-10em) rotate(-292.5deg);
-}
-
-.rotater:nth-child(9) {
-  -webkit-transform: rotate(337.5deg);
-  -ms-transform: rotate(337.5deg);
-  transform: rotate(337.5deg);
-}
-
-.menu.active .rotater:nth-child(9) .btn-icon {
-  -webkit-transform: translateX(-10em) rotate(-337.5deg);
-  -ms-transform: translateX(-10em) rotate(-337.5deg);
-  transform: translateX(-10em) rotate(-337.5deg);
 }
