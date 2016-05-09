@@ -76,7 +76,6 @@ body {
   z-index: -1;
 }
 
-.menu .btn:hover .fa { color: rgba(255, 255, 255, 0.7); }
 
 .menu .btn.trigger {
   opacity: 1;
@@ -86,16 +85,6 @@ body {
   transition: transform 0.3s;
 }
 
-.menu .btn.trigger:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
-.menu .btn.trigger:hover .line { background-color: rgba(255, 255, 255, 0.7); }
-
-.menu .btn.trigger:hover .line:before,
-.menu .btn.trigger:hover .line:after { background-color: rgba(255, 255, 255, 0.7); }
 
 .menu .btn.trigger .line {
   width: 60%;
