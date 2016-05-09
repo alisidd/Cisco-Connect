@@ -27,6 +27,11 @@ body {
 .menu {
   width: 5em;
   height: 5em;
+  animation-name: num2;
+  animation-duration: 1s;
+  transform: translate(-55px, 0px) rotate(90deg);
+  top: 50%;
+  left: 50%;
 }
 
 .menu .btn {
@@ -65,7 +70,7 @@ body {
   opacity: 1;
   width: 120px;
   height: 120px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   border: 1px solid #fff;
   -webkit-transition: all 0.5s;
@@ -85,6 +90,18 @@ body {
   transition: transform 0.3s;
 }
 
+.menu .btn.trigger:active {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.menu .btn.trigger:active ~ .circle {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8) translate(-4.8em, -4.7em);
+  background: rgba(255, 255, 255, 0.5);
+}
 
 .menu .btn.trigger .line {
   width: 60%;
@@ -93,9 +110,30 @@ body {
   border-radius: 6px;
   -webkit-transition: background-color 0.3s, height 0.3s, top 0.3s;
   transition: background-color 0.3s, height 0.3s, top 0.3s;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: translate(-55px, 0px) rotate(90deg);
 }
 
-.menu .btn.trigger .line:before,
+.menu .btn.trigger .line:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  border-radius: 6px;
+  -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+  transform: translate(16px, -12px) rotate(60deg);
+}
 .menu .btn.trigger .line:after {
   content: "";
   display: block;
@@ -107,6 +145,11 @@ body {
   border-radius: 6px;
   -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
   transition: background-color 0.3s, transform 0.3s;
+  -webkit-transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -o-transform: rotate(-60deg);
+  transform: translate(-17px, -45px) rotate(-60deg);
 }
 
 .menu .btn.trigger .line:before {
@@ -133,8 +176,6 @@ body {
   opacity: 1;
   z-index: 50;
 }
-
-
 
 .menu.active .circle {
     display: block;
@@ -187,25 +228,47 @@ body {
 }
 
 
-.menu.active .trigger .line {
-  height: 0px;
-  top: 50%;
+.menu.active {
+  animation-name: num1;
+  animation-duration: 1s;
+  transform: translate(5px,0) rotate(58deg);
+  top: 5%;
+  left: 5%;
+
+}
+
+@keyframes num1 {
+  from {
+    transform: translate(-55px, 0px) rotate(90deg);
+    top: 50%;
+    left: 50%;
+  }
+  to {
+    transform: translate(5px,0) rotate(58deg);
+    top: 5%;
+    left: 5%;
+  }
+}
+
+@keyframes num2 {
+  from {
+    transform: translate(5px,0) rotate(58deg);
+    top: 5%;
+    left: 5%;
+  }
+  to {
+    transform: translate(-55px, 0px) rotate(90deg);
+    top: 50%;
+    left: 50%;
+  }
 }
 
 .menu.active .trigger .line:before {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: translate(-6px, 0) rotate(-45deg);
+
 }
 
 .menu.active .trigger .line:after {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: translate(-6px, 0) rotate(45deg);
+
 }
 
 .rotater:nth-child(1) {
