@@ -29,7 +29,7 @@ body {
   height: 5em;
   animation-name: num2;
   animation-duration: 1s;
-  transform: translate(-55px, 0px) rotate(90deg);
+  transform: translate(-55px, 0px) rotate(120deg);
   top: 50%;
   left: 50%;
 }
@@ -114,7 +114,7 @@ body {
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
-  transform: translate(-55px, 0px) rotate(90deg);
+  transform: translate(-50px, 0px) rotate(90deg);
 }
 
 .menu .btn.trigger .line:before {
@@ -231,7 +231,7 @@ body {
 .menu.active {
   animation-name: num1;
   animation-duration: 1s;
-  transform: translate(5px,0) rotate(58deg);
+  transform: translate(5px,0) rotate(59deg);
   top: 5%;
   left: 5%;
 
@@ -239,12 +239,12 @@ body {
 
 @keyframes num1 {
   from {
-    transform: translate(-55px, 0px) rotate(90deg);
+    transform: translate(-55px, 0px) rotate(120deg);
     top: 50%;
     left: 50%;
   }
   to {
-    transform: translate(5px,0) rotate(58deg);
+    transform: translate(5px,0) rotate(59deg);
     top: 5%;
     left: 5%;
   }
@@ -252,12 +252,12 @@ body {
 
 @keyframes num2 {
   from {
-    transform: translate(5px,0) rotate(58deg);
+    transform: translate(20px,0) rotate(59deg);
     top: 5%;
     left: 5%;
   }
   to {
-    transform: translate(-55px, 0px) rotate(90deg);
+    transform: translate(-55px, 0px) rotate(120deg);
     top: 50%;
     left: 50%;
   }
