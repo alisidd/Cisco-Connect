@@ -278,13 +278,44 @@ body {
        url('../fonts/Work-Sans-200/Work-Sans-200.svg#WorkSans') format('svg');
 }
 
-.menu-option {
+.menu-option1 {
   position: relative;
   left: 125px;
-  top: 37px;
+  top: 5px;
   font-family: 'Work Sans', sans-serif;
   font-size: 30px;
   color: white;
+}
+
+.menu-option2 {
+  position: relative;
+  left: 80px;
+  top: 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 30px;
+  color: white;
+}
+
+.menu-option3 {
+  position: relative;
+  left: 125px;
+  top: 5px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 30px;
+  color: white;
+  width: 200px;
+}
+
+.menu-icon {
+  position: relative;
+  left: 40px;
+  top: 40px;
+}
+
+.menu-icon2 {
+  position: relative;
+  left: 33px;
+  top: 33px;
 }
 
 .rotater:nth-child(1) {
