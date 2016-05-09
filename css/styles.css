@@ -2,11 +2,10 @@ body {
   background: linear-gradient(37deg, #ae2424, #abd42d, #0c5b6c, #b4b006);
   background-size: 800% 800%;
 
-  -webkit-animation: Gradient 57s ease infinite;
   animation: Gradient 57s ease infinite;
 }
 
-@-webkit-keyframes Gradient {
+@keyframes Gradient {
     0%{background-position:0% 83%}
     50%{background-position:100% 18%}
     100%{background-position:0% 83%}
@@ -265,6 +264,20 @@ body {
   }
 }
 
+@font-face {
+  font-family: 'Work Sans';
+  font-weight: 200;
+  font-style: normal;
+  src: url('../fonts/Work-Sans-200/Work-Sans-200.eot');
+  src: url('../fonts/Work-Sans-200/Work-Sans-200.eot?#iefix') format('embedded-opentype'),
+       local('Work Sans ExtraLight'),
+       local('Work-Sans-200'),
+       url('../fonts/Work-Sans-200/Work-Sans-200.woff2') format('woff2'),
+       url('../fonts/Work-Sans-200/Work-Sans-200.woff') format('woff'),
+       url('../fonts/Work-Sans-200/Work-Sans-200.ttf') format('truetype'),
+       url('../fonts/Work-Sans-200/Work-Sans-200.svg#WorkSans') format('svg');
+}
+
 .menu-option {
   position: relative;
   left: 125px;
@@ -272,7 +285,6 @@ body {
   font-family: 'Work Sans', sans-serif;
   font-size: 30px;
   color: white;
-  font-weight: 100;
 }
 
 .rotater:nth-child(1) {
