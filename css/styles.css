@@ -277,6 +277,36 @@ body {
   z-index: 50;
 }
 
+
+
+.menu.active .btn-icon .circle {
+  .menu .circle {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    filter: alpha(opacity=100);
+    opacity: 1;
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    z-index: -1;
+  }
+}
+
+
 .menu.active .trigger .line {
   height: 0px;
   top: 50%;
