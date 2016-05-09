@@ -279,8 +279,32 @@ body {
 
 
 
+.menu.active .circle {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    filter: alpha(opacity=100);
+    opacity: 0;
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    z-index: -1;
+}
+
 .menu.active .btn-icon .circle {
-  .menu .circle {
     display: block;
     position: absolute;
     top: 50%;
@@ -292,8 +316,8 @@ body {
     transform: translate(-50%, -50%);
     filter: alpha(opacity=100);
     opacity: 1;
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     background-color: transparent;
     border-radius: 50%;
     border: 1px solid #fff;
@@ -303,7 +327,6 @@ body {
     -o-transition: all 0.5s;
     transition: all 0.5s;
     z-index: -1;
-  }
 }
 
 
@@ -347,15 +370,15 @@ body {
 }
 
 .menu.active .rotater:nth-child(2) .btn-icon {
-  -webkit-transform: translateX(-10em) rotate(-22.5deg);
-  -ms-transform: translateX(-10em) rotate(-22.5deg);
-  transform: translateX(-10em) rotate(-22.5deg);
+  -webkit-transform: translate(-13em, -4.6em) rotate(-22.5deg);
+  -ms-transform: translate(-13em, -4.6em) rotate(-22.5deg);
+  transform: translate(-13em, -4.6em) rotate(-22.5deg);
 }
 
 .rotater:nth-child(3) {
-  -webkit-transform: rotate(67.5deg);
-  -ms-transform: rotate(67.5deg);
-  transform: rotate(67.5deg);
+  -webkit-transform: translateX(3em) rotate(67.5deg);
+  -ms-transform: translateX(3em) rotate(67.5deg);
+  transform: translateX(3em) rotate(67.5deg);
 }
 
 .menu.active .rotater:nth-child(3) .btn-icon {
@@ -371,9 +394,9 @@ body {
 }
 
 .menu.active .rotater:nth-child(4) .btn-icon {
-  -webkit-transform: translateX(-10em) rotate(-112.5deg);
-  -ms-transform: translateX(-10em) rotate(-112.5deg);
-  transform: translateX(-10em) rotate(-112.5deg);
+  -webkit-transform: rotate(-112.5deg) translate(8.6em, -9.2em);
+  -ms-transform: rotate(-112.5deg) translate(8.6em, -9.2em);
+  transform: rotate(-112.5deg) translate(8.6em, -9.2em);
 }
 
 .rotater:nth-child(5) {
