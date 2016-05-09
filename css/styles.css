@@ -2,11 +2,11 @@ body {
   background: linear-gradient(37deg, #ae2424, #abd42d, #0c5b6c, #b4b006);
   background-size: 800% 800%;
 
-  -webkit-animation: AnimationName 57s ease infinite;
-  animation: AnimationName 57s ease infinite;
+  -webkit-animation: Gradient 57s ease infinite;
+  animation: Gradient 57s ease infinite;
 }
 
-@-webkit-keyframes AnimationName {
+@-webkit-keyframes Gradient {
     0%{background-position:0% 83%}
     50%{background-position:100% 18%}
     100%{background-position:0% 83%}
@@ -65,7 +65,7 @@ body {
   opacity: 1;
   width: 120px;
   height: 120px;
-  background-color: transparent;
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   border: 1px solid #fff;
   -webkit-transition: all 0.5s;
