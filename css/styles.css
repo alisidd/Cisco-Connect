@@ -265,6 +265,16 @@ body {
   }
 }
 
+.menu-option {
+  position: relative;
+  left: 125px;
+  top: 37px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 30px;
+  color: white;
+  font-weight: 100;
+}
+
 .rotater:nth-child(1) {
   -webkit-transform: rotate(-22.5deg);
   -ms-transform: rotate(-22.5deg);
