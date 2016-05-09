@@ -1,15 +1,12 @@
-body {
-  background: linear-gradient(37deg, #ae2424, #abd42d, #0c5b6c, #b4b006);
-  background-size: 800% 800%;
-
-  animation: Gradient 57s ease infinite;
+#gradient {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #836997;
 }
 
-@keyframes Gradient {
-    0%{background-position:0% 83%}
-    50%{background-position:100% 18%}
-    100%{background-position:0% 83%}
-}
 
 .menu,
 .menu .btn .fa,
@@ -123,12 +120,6 @@ body {
   animation-duration: 0.25s;
   animation-timing-function: steps(6000);
   transform: scale(0.8) translate(0px,3px);
-}
-
-.menu.active .btn-icon:active > a {
-  -webkit-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  transform: scale(0.8);
 }
 
 @keyframes imageanimate {
