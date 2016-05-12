@@ -1,3 +1,5 @@
+
+/* Font used */
 @font-face {
   font-family: 'Work Sans';
   font-weight: 200;
@@ -10,37 +12,6 @@
        url('../fonts/Work-Sans-200/Work-Sans-200.woff') format('woff'),
        url('../fonts/Work-Sans-200/Work-Sans-200.ttf') format('truetype'),
        url('../fonts/Work-Sans-200/Work-Sans-200.svg#WorkSans') format('svg');
-}
-
-@keyframes imageanimate {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0.8) translate(0px,3px);
-  }
-}
-
-@keyframes imageanimateback {
-  from {
-    transform: scale(0.8) translate(0px,3px);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-@keyframes play {
-  from {
-    transform: translate(-55px, 0px) rotate(120deg);
-    top: 50%;
-    left: 50%;
-  }
-  to {
-    transform: translate(5px,0) rotate(59deg);
-    top: 5%;
-    left: 5%;
-  }
 }
 
 @keyframes back {
@@ -100,9 +71,11 @@ a {
 .menu {
   width: 5em;
   height: 5em;
+  -webkit-transition: -webkit-transform 1s;
+  transition: transform 1s;
   animation-name: back;
   animation-duration: 1s;
-  animation-timing-function: steps(6000);
+  animation-timing-function: linear;
   transform: translate(-55px, 0px) rotate(120deg);
   top: 50%;
   left: 50%;
@@ -236,10 +209,12 @@ a {
 }
 
 /* What happens when start button is pressed */
+
+.menu {
+  transition: all 1s;
+}
 .menu.active {
-  animation-name: play;
-  animation-duration: 1s;
-  animation-timing-function: steps(6000);
+  -webkit-transform: translate(5px,0) rotate(59deg);
   transform: translate(5px,0) rotate(59deg);
   top: 5%;
   left: 5%;
@@ -324,20 +299,12 @@ a {
 /* Icon before and after */
 
 .menu.active .btn-icon > img{
-  -webkit-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  animation-name: imageanimateback;
-  animation-duration: 0.25s;
-  animation-timing-function: steps(6000);
-  transform: scale(1);
+  transition: all 0.5s;
 }
 
 .menu.active .btn-icon:active > img {
   -webkit-transform: scale(0.8);
   -ms-transform: scale(0.8);
-  animation-name: imageanimate;
-  animation-duration: 0.25s;
-  animation-timing-function: steps(6000);
   transform: scale(0.8) translate(0px,3px);
 }
 
@@ -354,7 +321,7 @@ a {
   top: 33px;
 }
 
-/* The menu options' font and positioning*/
+/* The menu options' font and positioning */
 .menu-option1 {
   position: relative;
   left: 125px;
