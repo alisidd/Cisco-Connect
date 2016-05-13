@@ -269,6 +269,12 @@ a {
   width:300px;
 }
 
+.hosp-menu .btn1 .circle {
+  position: absolute;
+  left: -70px;
+  top: -105px;
+}
+
 .hosp-option2 {
  position: absolute;
   left: 0px;
@@ -276,6 +282,13 @@ a {
   font-family: 'Work Sans', sans-serif;
   font-size: 30px;
   color: white;
+}
+
+
+.hosp-menu .btn2 .circle {
+  position: absolute;
+  left: -70px;
+  top: 27px;
 }
 
 .hosp-option3 {
@@ -286,6 +299,12 @@ a {
   font-size: 30px;
   color: white;
   width:300px;
+}
+
+.hosp-menu .btn3 .circle {
+  position: absolute;
+  left: -70px;
+  top: 169px;
 }
 
 .mall-menu {
@@ -309,7 +328,7 @@ a {
   transform: translate(-800px,500px);
 }
 
-.menu-options.disappear {
+.menu-btn.disappear {
   opacity: 0;
 }
 
@@ -347,6 +366,12 @@ a {
   color: white;
 }
 
+.mall-menu .btn1 .circle {
+  position: absolute;
+  left: -70px;
+  top: -105px;
+}
+
 .mall-option2 {
   position: absolute;
   left: 0px;
@@ -354,6 +379,12 @@ a {
   font-family: 'Work Sans', sans-serif;
   font-size: 30px;
   color: white;
+}
+
+.mall-menu .btn2 .circle {
+  position: absolute;
+  left: -70px;
+  top: 27px;
 }
 
 .mall-option3 {
@@ -364,6 +395,12 @@ a {
   font-size: 30px;
   color: white;
   width:300px;
+}
+
+.mall-menu .btn3 .circle {
+  position: absolute;
+  left: -70px;
+  top: 169px;
 }
 
 .retail-menu {
@@ -421,6 +458,13 @@ a {
   color: white;
 }
 
+.retail-menu .btn1 .circle {
+  position: absolute;
+  left: -70px;
+  top: -105px;
+}
+
+
 .retail-option2 {
   position: absolute;
   left: 0px;
@@ -431,6 +475,13 @@ a {
   width:300px;
 }
 
+
+.retail-menu .btn2 .circle {
+  position: absolute;
+  left: -70px;
+  top: 27px;
+}
+
 .retail-option3 {
   position: absolute;
   left: 0px;
@@ -439,6 +490,13 @@ a {
   font-size: 30px;
   color: white;
   width:300px;
+}
+
+
+.retail-menu .btn3 .circle {
+  position: absolute;
+  left: -70px;
+  top: 169px;
 }
 
 /* What happens when start button is pressed */
