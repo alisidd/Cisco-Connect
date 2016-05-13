@@ -53,11 +53,14 @@
 }
 
 #logo {
-  position:absolute;
-  width:15%;
-  height:15%;
-  top: 20px;
-  left: 590px;
+  position:relative;
+  top:20px;
+  right:20px;
+  width:13%;
+  height: auto;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a {
@@ -257,30 +260,32 @@ a {
 }
 
 .hosp-option1 {
-  position: relative;
-  left: 125px;
-  bottom: 120px;
+  position: absolute;
+  left: 0px;
+  top: -122px;
   font-family: 'Work Sans', sans-serif;
   font-size: 30px;
   color: white;
+  width:300px;
 }
 
 .hosp-option2 {
-  position: relative;
-  left: 125px;
-  top: 20px;
+ position: absolute;
+  left: 0px;
+  top: 10px;
   font-family: 'Work Sans', sans-serif;
   font-size: 30px;
   color: white;
 }
 
 .hosp-option3 {
-  position: relative;
-  left: 125px;
-  top: 160px;
+  position: absolute;
+  left: 0px;
+  top: 152px;
   font-family: 'Work Sans', sans-serif;
   font-size: 30px;
   color: white;
+  width:300px;
 }
 
 .mall-menu {
@@ -302,6 +307,10 @@ a {
   position: absolute;
   opacity: 1;
   transform: translate(-800px,500px);
+}
+
+.menu-options.disappear {
+  opacity: 0;
 }
 
 .mall-menu .mall-btn .circle {
@@ -330,30 +339,31 @@ a {
 }
 
 .mall-option1 {
-  position: relative;
-  left: 125px;
-  bottom: 120px;
+   position: absolute;
+  left: 0px;
+  top: -122px;
   font-family: 'Work Sans', sans-serif;
   font-size: 30px;
   color: white;
 }
 
 .mall-option2 {
-  position: relative;
-  left: 125px;
-  top: 20px;
+  position: absolute;
+  left: 0px;
+  top: 10px;
   font-family: 'Work Sans', sans-serif;
   font-size: 30px;
   color: white;
 }
 
 .mall-option3 {
-  position: relative;
-  left: 125px;
-  top: 160px;
+  position: absolute;
+  left: 0px;
+  top: 152px;
   font-family: 'Work Sans', sans-serif;
   font-size: 30px;
   color: white;
+  width:300px;
 }
 
 .retail-menu {
@@ -403,30 +413,32 @@ a {
 }
 
 .retail-option1 {
-  position: relative;
-  left: 125px;
-  bottom: 120px;
+   position: absolute;
+  left: 0px;
+  top: -122px;
   font-family: 'Work Sans', sans-serif;
   font-size: 30px;
   color: white;
 }
 
 .retail-option2 {
-  position: relative;
-  left: 125px;
-  top: 20px;
+  position: absolute;
+  left: 0px;
+  top: 10px;
   font-family: 'Work Sans', sans-serif;
   font-size: 30px;
   color: white;
+  width:300px;
 }
 
 .retail-option3 {
-  position: relative;
-  left: 125px;
-  top: 160px;
+  position: absolute;
+  left: 0px;
+  top: 152px;
   font-family: 'Work Sans', sans-serif;
   font-size: 30px;
   color: white;
+  width:300px;
 }
 
 /* What happens when start button is pressed */
