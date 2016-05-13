@@ -14,6 +14,45 @@
 
     <script>
       $(document).ready(function() {
+        $(".trigger").click(function() {
+          if ($(".trigger").hasClass("second-menu")) {
+            $(".hosp-menu").removeClass("active");
+            $(".mall-menu").removeClass("active");
+            $(".retail-menu").removeClass("active");
+            $(".menu-btn").removeClass("disappear");
+            $(".menu").addClass("active");
+            $(".trigger").removeClass("second-menu")
+          }
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function() {
+        $(".hosp-trigger").click(function() {
+          $(".trigger").addClass("second-menu");
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function() {
+        $(".mall-trigger").click(function() {
+          $(".trigger").addClass("second-menu");
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function() {
+        $(".retail-trigger").click(function() {
+          $(".trigger").addClass("second-menu");
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function() {
         $(".hosp-trigger").click(function() {
           $(".hosp-menu").toggleClass("active");
           $(".menu-btn").toggleClass("disappear");
@@ -45,121 +84,120 @@
     <!-- Animated background -->
     <div id="gradient"><img id="logo" src="images/logo.png"></div>
     <!-- The main menu -->
-    <div>
-      <div class="menu">
-        <!-- Start button -->
-        <div class="btn trigger">
-          <span class="line"></span>
+
+    <div class="menu">
+      <!-- Start button -->
+      <div class="btn trigger">
+        <span class="line"></span>
+      </div>
+
+      <!-- Menu options -->
+
+      <!-- Option 1 -->
+      <div class="rotater menu-btn">
+        <div class="btn btn-icon hosp-trigger">
+          <span class="circle"></span>
+          <img src="images/hospital.png" class="menu-icon">
+          <a class="menu-option1"> Hospital </a>
         </div>
+      </div>
 
-        <!-- Menu options -->
-
-        <!-- Option 1 -->
-        <div class="rotater menu-btn">
-          <div class="btn btn-icon hosp-trigger">
-            <span class="circle"></span>
-            <img src="images/hospital.png" class="menu-icon">
-            <a class="menu-option1"> Hospital </a>
-          </div>
+      <!-- Option 2 -->
+      <div class="rotater menu-btn">
+        <div class="btn btn-icon mall-trigger">
+          <span class="circle"></span>
+          <img src="images/mall.png" class="menu-icon2">
+          <a class="menu-option2"> Mall </a>
         </div>
+      </div>
 
-        <!-- Option 2 -->
-        <div class="rotater menu-btn">
-          <div class="btn btn-icon mall-trigger">
-            <span class="circle"></span>
-            <img src="images/mall.png" class="menu-icon2">
-            <a class="menu-option2"> Mall </a>
-          </div>
+      <!-- Option 3 -->
+      <div class="rotater menu-btn">
+        <div class="btn btn-icon retail-trigger">
+          <span class="circle"></span>
+          <img src="images/retail.png" class="menu-icon">
+          <a class="menu-option3"> Retail</a>
         </div>
+      </div>
 
-        <!-- Option 3 -->
-        <div class="rotater menu-btn">
-          <div class="btn btn-icon retail-trigger">
-            <span class="circle"></span>
-            <img src="images/retail.png" class="menu-icon">
-            <a class="menu-option3"> Retail</a>
-          </div>
-        </div>
+      <!-- Circle for start button -->
+      <span class="circle"></span>
+    </div>
 
-        <!-- Circle for start button -->
+    <!-- Hospital menu options -->
+    <div class="hosp-menu" style="height:110px;width:110px;">
+
+      <!-- Option 1 -->
+      <div class="hosp-btn btn1">
         <span class="circle"></span>
+        <img src="images/dental.png" class="menu-icon">
+        <a class="hosp-option1"> Dental Care </a>
       </div>
 
-      <!-- Mall menu options -->
-      <div class="mall-menu" style="height:110px;width:110px;">
-
-        <!-- Option 1 -->
-        <div class="mall-btn btn1">
-          <span class="circle"></span>
-
-          <a class="mall-option1"> Promotions </a>
-        </div>
-
-        <!-- Option 2 -->
-        <div class="mall-btn btn2">
-          <span class="circle"></span>
-
-          <a class="mall-option2"> Map </a>
-        </div>
-
-        <!-- Option 3 -->
-        <div class="mall-btn btn3">
-          <span class="circle"></span>
-
-          <a class="mall-option3"> Call for Assistance </a>
-        </div>
+      <!-- Option 2 -->
+      <div class="hosp-btn btn2">
+        <span class="circle"></span>
+        <img src="images/lab.png" class="menu-icon">
+        <a class="hosp-option2"> Laboratory </a>
       </div>
 
-      <!-- Hospital menu options -->
-      <div class="hosp-menu" style="height:110px;width:110px;">
+      <!-- Option 3 -->
+      <div class="hosp-btn btn3">
+        <span class="circle"></span>
+        <img src="images/call.png" class="menu-icon">
+        <a class="hosp-option3"> Call for Assistance </a>
+      </div>
+    </div>
 
-        <!-- Option 1 -->
-        <div class="hosp-btn btn1">
-          <span class="circle"></span>
+    <!-- Mall menu options -->
+    <div class="mall-menu" style="height:110px;width:110px;">
 
-          <a class="hosp-option1"> Dental Care </a>
-        </div>
-
-        <!-- Option 2 -->
-        <div class="hosp-btn btn2">
-          <span class="circle"></span>
-
-          <a class="hosp-option2"> Laboratory </a>
-        </div>
-
-        <!-- Option 3 -->
-        <div class="hosp-btn btn3">
-          <span class="circle"></span>
-
-          <a class="hosp-option3"> Call for Assistance </a>
-        </div>
+      <!-- Option 1 -->
+      <div class="mall-btn btn1">
+        <span class="circle"></span>
+        <img src="images/promotions.png" class="menu-icon">
+        <a class="mall-option1"> Promotions </a>
       </div>
 
+      <!-- Option 2 -->
+      <div class="mall-btn btn2">
+        <span class="circle"></span>
+        <img src="images/map.png" class="menu-icon">
+        <a class="mall-option2"> Map </a>
+      </div>
 
-      <!-- Retail menu options -->
-      <div class="retail-menu" style="height:110px;width:110px;">
+      <!-- Option 3 -->
+      <div class="mall-btn btn3">
+        <span class="circle"></span>
+        <img src="images/call.png" class="menu-icon">
+        <a class="mall-option3"> Call for Assistance </a>
+      </div>
+    </div>
 
 
-        <!-- Option 1 -->
-        <div class="retail-btn btn1">
-          <span class="circle"></span>
+    <!-- Retail menu options -->
+    <div class="retail-menu" style="height:110px;width:110px;">
 
-          <a class="retail-option1"> Items </a>
-        </div>
 
-        <!-- Option 2 -->
-        <div class="retail-btn btn2">
-          <span class="circle"></span>
+      <!-- Option 1 -->
+      <div class="retail-btn btn1">
+        <span class="circle"></span>
+        <img src="images/items.png" class="menu-icon">
+        <a class="retail-option1"> Items </a>
+      </div>
 
-          <a class="retail-option2"> Coming Soon </a>
-        </div>
+      <!-- Option 2 -->
+      <div class="retail-btn btn2">
+        <span class="circle"></span>
+        <img src="images/coming-soon.png" class="menu-icon">
+        <a class="retail-option2"> Coming Soon </a>
+      </div>
 
-        <!-- Option 3 -->
-        <div class="retail-btn btn3">
-          <span class="circle"></span>
-
-          <a class="retail-option3"> Call for Assistance</a>
-        </div>
+      <!-- Option 3 -->
+      <div class="retail-btn btn3">
+        <span class="circle"></span>
+        <img src="images/call.png" class="menu-icon">
+        <a class="retail-option3"> Call for Assistance</a>
       </div>
     </div>
 
