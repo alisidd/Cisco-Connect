@@ -122,6 +122,24 @@
         });
       });
     </script>
+
+    <script>
+      $(document).ready(function() {
+        $(".retail-btn.btn1").click(function() {
+          $(".retail-btn.btn1 .details").addClass("active");
+          $(".retail-btn.btn2 .details").removeClass("active");
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function() {
+        $(".retail-btn.btn2").click(function() {
+          $(".retail-btn.btn2 .details").addClass("active");
+          $(".retail-btn.btn1 .details").removeClass("active");
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -210,9 +228,18 @@
         <span class="circle"></span>
         <img src="images/promotions.png">
         <a class="mall-option1"> Promotions </a>
-        <span class="details">You can find the best offers on banners in front of every shop, and by asking for brochures as well. </br> </br>
-                                For more information regarding our promotions, use the Kiosk you can click on the assistance button to take you directly to one of our employees.</br></br>
-                                Do not forget to ask for promotion cards, whenever you are at the checkout counter.</span>
+        <span class="details">
+          <img src="images/clarks.png">
+          <h1> Clarks Desert Boots</h1>
+          <p style="font-size: 24px;">50% Off!! - Clarks</p>
+          <h2> 240 SAR </h2>
+          <div style="position: relative; bottom: 400px">
+            <img style="left:60px;bottom:70px;height:150px;" src="images/Shirt.png">
+            <h1> Plain White Shirt</h1>
+            <p style="font-size: 24px;">20% Off!! - GAP</p>
+            <h2> 80 SAR </h2>
+          </div>
+        </span>
       </div>
 
       <!-- Option 2 -->
@@ -241,7 +268,37 @@
         <span class="circle"></span>
         <img src="images/items.png">
         <a class="retail-option1"> Items </a>
-        <span class="details"></span>
+        <span class="details">
+          <img src="images/iphone.png">
+          <h1> iPhone 6S </h1>
+          <p> 64 GB <p>
+          <p>
+          </br>
+          </br>
+          </br>
+            Core A9 Processor</br></br>
+            Retina HD display with 3D Touch</br></br>
+            12-megapixel camera</br></br>
+            1080p HD video recording at 60fps</br></br>
+          <p>
+          <h2> 2500 SAR </h2>
+          <div style="position: relative; top: 400px;right:30px">
+            <img src="images/s7.png">
+            <h1> Galaxy S7 </h1>
+            <p> 64 GB <p>
+            <p>
+            </br>
+            </br>
+            </br>
+              Exynos 8890 Octa-core Processor</br></br>
+              5.1 inches QHD Display</br></br>
+              12-megapixel camera</br></br>
+              1080p HD video recording at 60fps</br></br>
+            <p>
+            <h2> 2300 SAR </h2>
+          </div>
+        </span>
+        <img class="down-button" src="images/down.png" style="height:30px;width:auto;position:relative;left:600px;top:320px;">
       </div>
 
       <!-- Option 2 -->
@@ -249,6 +306,21 @@
         <span class="circle"></span>
         <img src="images/coming-soon.png">
         <a class="retail-option2"> Coming Soon </a>
+        <span class="details">
+          <img src="images/htc10.png">
+          <h1> HTC 10 </h1>
+          <p> 64 GB <p>
+          <p>
+          </br>
+          </br>
+          </br>
+            Snapdragon 820 Processor</br></br>
+            5.2 inches QHD Display</br></br>
+            12-megapixel camera</br></br>
+            Dual Speakers</br></br>
+          <p>
+          <h2> N/A </h2>
+        </span>
       </div>
 
       <!-- Option 3 -->
