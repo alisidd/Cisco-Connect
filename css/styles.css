@@ -517,6 +517,12 @@ a {
   opacity: 0;
 }
 
+.rotater.menu-btn.disappear .btn.btn-icon .circle, .menu-btn.disappear .btn.btn-icon img, .menu-btn.disappear .btn.btn-icon a{
+  pointer-events: none;
+  cursor: default;
+  transform: translate(-500px,500px);
+}
+
 .mall-menu .mall-btn .circle {
     display: block;
     position: absolute;
@@ -930,7 +936,7 @@ a {
 /* What happens when start button is pressed */
 
 .menu {
-  transition: all 1s;
+  transition: top 1s, left 1s, transform 1s;
 }
 .menu.active {
   -webkit-transform: translate(5px,0) rotate(59deg);

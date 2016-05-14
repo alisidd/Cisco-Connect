@@ -41,7 +41,11 @@
     <script>
       $(document).ready(function() {
         $(".hosp-trigger").click(function() {
-          $(".trigger").addClass("second-menu");
+          if (!$(".mall-menu").hasClass("active") && !$(".retail-menu").hasClass("active")) {
+            $(".hosp-menu").addClass("active");
+            $(".menu-btn").addClass("disappear");
+            $(".trigger").addClass("second-menu");
+          }
         });
       });
     </script>
@@ -49,7 +53,11 @@
     <script>
       $(document).ready(function() {
         $(".mall-trigger").click(function() {
-          $(".trigger").addClass("second-menu");
+          if (!$(".retail-menu").hasClass("active") && !$(".hosp-menu").hasClass("active")) {
+            $(".mall-menu").addClass("active");
+            $(".menu-btn").addClass("disappear");
+            $(".trigger").addClass("second-menu");
+          }
         });
       });
     </script>
@@ -57,34 +65,11 @@
     <script>
       $(document).ready(function() {
         $(".retail-trigger").click(function() {
-          $(".trigger").addClass("second-menu");
-        });
-      });
-    </script>
-
-    <script>
-      $(document).ready(function() {
-        $(".hosp-trigger").click(function() {
-          $(".hosp-menu").toggleClass("active");
-          $(".menu-btn").toggleClass("disappear");
-        });
-      });
-    </script>
-
-    <script>
-      $(document).ready(function() {
-        $(".mall-trigger").click(function() {
-          $(".mall-menu").toggleClass("active");
-          $(".menu-btn").toggleClass("disappear");
-        });
-      });
-    </script>
-
-    <script>
-      $(document).ready(function() {
-        $(".retail-trigger").click(function() {
-          $(".retail-menu").toggleClass("active");
-          $(".menu-btn").toggleClass("disappear");
+          if (!$(".hosp-menu").hasClass("active") && !$(".mall-menu").hasClass("active")) {
+            $(".retail-menu").addClass("active");
+            $(".menu-btn").addClass("disappear");
+            $(".trigger").addClass("second-menu");
+          }
         });
       });
     </script>
