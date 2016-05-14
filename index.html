@@ -27,6 +27,7 @@
             $(".retail-menu").removeClass("active");
             $(".retail-btn.btn1 .details").removeClass("active");
             $(".retail-btn.btn2 .details").removeClass("active");
+            $(".down-button").removeClass("active");
 
             $(".menu-btn").removeClass("disappear");
             $(".menu").addClass("active");
@@ -109,7 +110,7 @@
       $(document).ready(function() {
         $(".mall-btn.btn1").click(function() {
           $(".mall-btn.btn1 .details").addClass("active");
-          $(".mall-btn.btn2 .map_view").removeClass("active");
+          $(".mall-btn.btn2 .map-view").removeClass("active");
         });
       });
     </script>
@@ -117,7 +118,7 @@
     <script>
       $(document).ready(function() {
         $(".mall-btn.btn2").click(function() {
-          $(".mall-btn.btn2 .map_view").addClass("active");
+          $(".mall-btn.btn2 .map-view").addClass("active");
           $(".mall-btn.btn1 .details").removeClass("active");
         });
       });
@@ -127,6 +128,7 @@
       $(document).ready(function() {
         $(".retail-btn.btn1").click(function() {
           $(".retail-btn.btn1 .details").addClass("active");
+          $(".down-button").addClass("active");
           $(".retail-btn.btn2 .details").removeClass("active");
         });
       });
@@ -137,6 +139,7 @@
         $(".retail-btn.btn2").click(function() {
           $(".retail-btn.btn2 .details").addClass("active");
           $(".retail-btn.btn1 .details").removeClass("active");
+          $(".down-button").removeClass("active");
         });
       });
     </script>
@@ -247,7 +250,7 @@
         <span class="circle"></span>
         <img src="images/map.png">
         <a class="mall-option2"> Map </a>
-        <img class="map_view" src="images/map_view.png">
+        <img class="map-view" src="images/map_view.png">
       </div>
 
       <!-- Option 3 -->

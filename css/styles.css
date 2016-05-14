@@ -4,16 +4,16 @@
 	height:40px;
 	width:auto;
 	position: absolute;
-  left: -303px;
+  left: -301px;
   top: -120px;
 
 }
 
 .hosp-menu .btn2 img {
-	height:40px;
+	height:35px;
 	width:auto;
   position: absolute;
-  left: -312px;
+  left: -310px;
   top: 8px;
 }
 
@@ -41,16 +41,17 @@
   top: 4px;
 }
 
-.mall-menu .btn2 .map_view {
+.mall-menu .btn2 .map-view {
   position: absolute;
-  top: 200px;
-  left: 200px;
-  width: 2000px;
+  top: -200px;
+  left: 50px;
+  width: 700px;
   height: auto;
   opacity: 0;
+  transition: opacity 1s;
 }
 
-.mall-menu .btn2 .map_view.active {
+.mall-menu .btn2 .map-view.active {
   opacity: 1;
 }
 
@@ -63,27 +64,27 @@
 }
 
 .retail-menu .btn1 img {
-	height:40px;
+	height:50px;
 	width:auto;
 	position: absolute;
-  left: -306px;
-  top: -126px;
+  left: -310px;
+  top: -132px;
 }
 
 .retail-menu .btn2 img {
-	height:40px;
+	height:50px;
 	width:auto;
   position: absolute;
-  left: -360px;
-  top: 8px;
+  left: -365px;
+  top: 0px;
 }
 
 .retail-menu .btn3 img {
-	height:40px;
+	height:50px;
 	width:auto;
   position: absolute;
-  left: -358px;
-  top: 146px;
+  left: -363px;
+  top: 142px;
 }
 
 
@@ -167,6 +168,14 @@ a {
   transform: translateX(-50%) translateY(-50%);
 }
 
+.down-button {
+  visibility: hidden;
+}
+
+.down-button.active {
+  visibility: visible;
+}
+
 .menu {
   height:110px;
   width:110px;
@@ -220,11 +229,11 @@ a {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   border: 1px solid #fff;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: opacity 0.5s, background 0.5s;
+  -moz-transition: opacity 0.5s, background 0.5s;
+  -ms-transition: opacity 0.5s, background 0.5s;
+  -o-transition: opacity 0.5s, background 0.5s;
+  transition: opacity 0.5s, background 0.5s;
   z-index: -1;
 }
 
@@ -936,28 +945,7 @@ a {
 }
 
 .menu.active .circle {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    filter: alpha(opacity=100);
     opacity: 0;
-    width: 80px;
-    height: 80px;
-    background-color: transparent;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    z-index: -1;
 }
 
 /* Circle around start button before and after */
@@ -991,11 +979,11 @@ a {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     border: 1px solid #fff;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
+    -webkit-transition: transform 0.5s, background 0.5s;
+    -moz-transition: transform 0.5s, background 0.5s;
+    -ms-transition: transform 0.5s, background 0.5s;
+    -o-transition: transform 0.5s, background 0.5s;
+    transition: transform 0.5s, background 0.5s;
     z-index: -1;
 }
 
@@ -1082,34 +1070,46 @@ a {
   -webkit-transform: rotate(22.5deg);
   -ms-transform: rotate(22.5deg);
   transform: rotate(22.5deg);
+  cursor: default;
+  pointer-events: none;
 }
 
 .menu.active .rotater:nth-child(2) .btn-icon {
   -webkit-transform: translate(20em, -4.6em) rotate(-81deg);
   -ms-transform: translate(20em, -4.6em) rotate(-81deg);
   transform: translate(20em, -4.6em) rotate(-81deg);
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .rotater:nth-child(3) {
   -webkit-transform: translateX(3em) rotate(67.5deg);
   -ms-transform: translateX(3em) rotate(67.5deg);
   transform: translateX(3em) rotate(67.5deg);
+  cursor: default;
+  pointer-events: none;
 }
 
 .menu.active .rotater:nth-child(3) .btn-icon {
   -webkit-transform: rotate(-126deg) translate(99px, 400px);
   -ms-transform: rotate(-126deg) translate(99px, 400px);
   transform: rotate(-126deg) translate(99px, 400px);
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .rotater:nth-child(4) {
   -webkit-transform: rotate(112.5deg);
   -ms-transform: rotate(112.5deg);
   transform: rotate(112.5deg);
+  cursor: default;
+  pointer-events: none;
 }
 
 .menu.active .rotater:nth-child(4) .btn-icon {
   -webkit-transform: rotate(-171deg) translate(125px, 578px);
   -ms-transform: rotate(-171deg) translate(125px, 578px);
   transform: rotate(-171deg) translate(125px, 578px);
+  cursor: pointer;
+  pointer-events: auto;
 }
