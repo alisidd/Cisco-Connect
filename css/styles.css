@@ -176,6 +176,10 @@ a {
   visibility: visible;
 }
 
+body {
+  overflow: hidden;
+}
+
 .menu {
   height:110px;
   width:110px;
@@ -517,7 +521,7 @@ a {
   opacity: 0;
 }
 
-.rotater.menu-btn.disappear .btn.btn-icon .circle, .menu-btn.disappear .btn.btn-icon img, .menu-btn.disappear .btn.btn-icon a{
+.rotater.menu-btn.disappear .btn.btn-icon .circle, .menu-btn.disappear .btn.btn-icon img, .menu-btn.disappear .btn.btn-icon a {
   pointer-events: none;
   cursor: default;
   transform: translate(-500px,500px);
